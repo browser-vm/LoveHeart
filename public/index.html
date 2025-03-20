@@ -42,9 +42,10 @@
                 <button onclick="chemical.componentAction('forward', 'web')" class="terminal-btn">Forward ⇢</button>
                 <button onclick="chemical.componentAction('reload', 'web')" class="terminal-btn">↻ Reload</button>
                 <button onclick="chemical.componentAction('close', 'web')" class="terminal-btn danger">✕ Close</button>
+                <button onclick="toggleFullScreen()" class="terminal-btn fullscreen-btn">⛶ Full Screen</button>
             </nav>
 
-            <div class="terminal-output">
+            <div class="terminal-output" id="terminalOutput">
                 <iframe 
                     id="web" 
                     data-controls="controls" 
@@ -65,6 +66,31 @@
     </div>
     <script>
     async function startTorrent() {      
+    }
+
+    function toggleFullScreen() {
+        const terminalOutput = document.getElementById('terminalOutput');
+        if (!document.fullscreenElement) {
+            if (terminalOutput.requestFullscreen) {
+                terminalOutput.requestFullscreen();
+            } else if (terminalOutput.mozRequestFullScreen) { // Firefox
+                terminalOutput.mozRequestFullScreen();
+            } else if (terminalOutput.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                terminalOutput.webkitRequestFullscreen();
+            } else if (terminalOutput.msRequestFullscreen) { // IE/Edge
+                terminalOutput.msRequestFullscreen();
+            }
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) { // Firefox
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { // IE/Edge
+                document.msExitFullscreen();
+            }
+        }
     }
     </script>
 </body>

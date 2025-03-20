@@ -34,14 +34,14 @@ body {
 
 /* Terminal container */
 .terminal-container {
-    max-width: 800px;
+    max-width: 95%;
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
     background: rgba(0, 20, 0, 0.9);
     position: relative;
-    min-height: 600px;
+    min-height: 80vh;
 }
 
 /* Terminal header */
@@ -111,6 +111,7 @@ body {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .terminal-btn {
@@ -138,10 +139,14 @@ body {
     box-shadow: 0 0 10px #ff0000;
 }
 
+.fullscreen-btn {
+    margin-left: auto;
+}
+
 /* Output frame */
 .terminal-output {
     position: relative;
-    height: calc(100vh - 250px);
+    height: calc(80vh - 200px);
     overflow: hidden;
 }
 
@@ -169,4 +174,16 @@ body::after {
     );
     pointer-events: none;
     z-index: 999;
+}
+
+/* Full screen styles */
+.terminal-output:fullscreen {
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+}
+
+.terminal-output:fullscreen .terminal-frame {
+    width: 100%;
+    height: 100%;
 }
