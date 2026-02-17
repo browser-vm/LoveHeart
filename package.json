@@ -5,7 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -18,11 +23,16 @@
   },
   "homepage": "https://github.com/browser-vm/LoveHeart#readme",
   "dependencies": {
-    "express": "^4.21.2",
     "@mercuryworkshop/scramjet": "file:lib/scramjet.tgz",
-    "rammerhead": "file:lib/rammerhead.tgz",
     "@titaniumnetwork-dev/ultraviolet": "file:lib/ultraviolet.tgz",
-    "chemicaljs": "file:lib/chemicaljs-fix.tgz"
-    
+    "chemicaljs": "file:lib/chemicaljs-fix.tgz",
+    "express": "^4.21.2",
+    "rammerhead": "file:lib/rammerhead.tgz"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.0",
+    "globals": "^17.3.0",
+    "jest": "^30.2.0"
   }
 }

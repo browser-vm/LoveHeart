@@ -34,6 +34,35 @@ A speeding, lightweight proxy for bypassing internet censorship.
 
 4.  Open your web browser and navigate to `http://localhost:3000`
 
+## Development
+
+### Testing
+
+This project uses [Jest](https://jestjs.io/) for unit testing. Tests are located in the `__tests__` directory.
+
+```bash
+# Run all tests
+npm test
+
+# Run tests with coverage report
+npm run test:coverage
+
+# Run tests in watch mode (useful during development)
+npm run test:watch
+```
+
+### Linting
+
+This project uses [ESLint](https://eslint.org/) for code quality and consistency.
+
+```bash
+# Lint all JavaScript files
+npm run lint
+
+# Lint and automatically fix issues
+npm run lint:fix
+```
+
 ## Docker
 Our docker build image is available both on the Github container registry AND the [official Docker registry](https://hub.docker.com/r/browservm/loveheart).
 
