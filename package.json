@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/browser-vm/LoveHeart#readme",
   "dependencies": {
-    "chemicaljs": "^2.6.4",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "@mercuryworkshop/scramjet": "file:lib/scramjet.tgz",
+    "rammerhead": "file:lib/rammerhead.tgz",
+    "@titaniumnetwork-dev/ultraviolet": "file:lib/ultraviolet.tgz",
+    "chemicaljs": "file:lib/chemicaljs-fix.tgz"
+    
   }
 }
