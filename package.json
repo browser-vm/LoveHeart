@@ -1,6 +1,6 @@
 {
   "name": "loveheart-proxy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A powerful proxy using Chemical components.",
   "main": "index.js",
   "type": "module",

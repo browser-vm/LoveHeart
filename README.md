@@ -41,10 +41,10 @@ Our docker build image is available both on the Github container registry AND th
 COMING SOON!!!
 
 ## Updates
-I'll post updates on the status of the proxy here every now and then. I am currently writing to inform you that we have been blocked by WCPSS. We are working on getting another permanent short link up, but it will take some time. 😢
+I'll post updates on the status of the proxy here every now and then.
 
 ## Releases
-There will be no official release for version 0.0.2. However, we are working on an update to make links one-use - so that if you have a pesky parent or heavy usage restriction protocols they can't access the link by checking their internet logs.
+It's official. Release 0.0.3 is here. And it works.
 
 ## Issues
 If you need another link, [email me](mailto:namelessonbandlab@outlook.com). We refuse to be blocked by censors.
